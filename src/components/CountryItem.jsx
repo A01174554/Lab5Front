@@ -12,7 +12,7 @@ function CountryItem({ country, reloadCountries }) {
     <div>
 
       <p>
-        <b>{country.name}</b> - {country.capital} - {country.currency}
+        <b>{country.nombre}</b> - {country.empresa} - {country.edad} - {country.rol} - {country.correo}
       </p>
 
       <button onClick={handleDelete}>

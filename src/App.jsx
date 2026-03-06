@@ -7,7 +7,7 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-        <h1>Administrador de Países</h1>
+        <h1>Administrador de Empleados</h1>
       </header>
 
       <main>
@@ -15,7 +15,7 @@ function App() {
       </main>
 
       <footer>
-        <p>CRUD de Países © 2026</p>
+        <p>CRUD de Empleados © 2026</p>
       </footer>
 
     </div>

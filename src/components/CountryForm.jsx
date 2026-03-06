@@ -3,22 +3,28 @@ import { createCountry } from "../services/api";
 
 function CountryForm({ reloadCountries }) {
 
-  const [name, setName] = useState("");
-  const [capital, setCapital] = useState("");
-  const [currency, setCurrency] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [empresa, setEmpresa] = useState("");
+  const [edad, setEdad] = useState("");
+  const [rol, setRol] = useState("");
+  const [correo, setCorreo] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     await createCountry({
-      name,
-      capital,
-      currency
+      nombre,
+      empresa,
+      edad,
+      rol,
+      correo
     });
 
-    setName("");
-    setCapital("");
-    setCurrency("");
+    setNombre("");
+    setEmpresa("");
+    setEdad("");
+    setRol("");
+    setCorreo("");
 
     reloadCountries();
   };
@@ -26,24 +32,36 @@ function CountryForm({ reloadCountries }) {
   return (
     <form onSubmit={handleSubmit}>
 
-      <h2>Agregar País</h2>
+      <h2>Agregar Empleado</h2>
 
       <input
         placeholder="Nombre"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        value={nombre}
+        onChange={(e) => setNombre(e.target.value)}
       />
 
       <input
-        placeholder="Capital"
-        value={capital}
-        onChange={(e) => setCapital(e.target.value)}
+        placeholder="Empresa"
+        value={empresa}
+        onChange={(e) => setEmpresa(e.target.value)}
       />
 
       <input
-        placeholder="Moneda"
-        value={currency}
-        onChange={(e) => setCurrency(e.target.value)}
+        placeholder="Edad"
+        value={edad}
+        onChange={(e) => setEdad(e.target.value)}
+      />
+
+      <input
+        placeholder="Rol"
+        value={rol}
+        onChange={(e) => setRol(e.target.value)}
+      />
+
+      <input
+        placeholder="Correo"
+        value={correo}
+        onChange={(e) => setCorreo(e.target.value)}
       />
 
       <button type="submit">Agregar</button>

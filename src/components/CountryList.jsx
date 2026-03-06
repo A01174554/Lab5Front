@@ -21,7 +21,7 @@ function CountryList() {
 
       <CountryForm reloadCountries={loadCountries} />
 
-      <h2>Lista de Países</h2>
+      <h2>Lista de Empleados</h2>
 
       {countries.map((country) => (
         <CountryItem
